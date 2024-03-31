@@ -1,0 +1,1 @@
+print_greeting("Привет, Мир")
