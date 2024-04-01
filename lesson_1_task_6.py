@@ -1,22 +1,31 @@
-def print_a():
-    print("a", end="1")
-def print_b():
-    print("b", end="2")
-def print_c():
-    print("c", end="3")
-def print_d():
-    print("d", end="4")
-def print_e():
-    print("e", end="5")
-def print_f():
-    print("f", end="6")
-def print_g():
-    print("g", end="7")
-def print_h():
-    print("h", end="8")
-def print_i():
-    print("i", end="9")
-def print_j():
-    print("j", end="10")
-print_a(), print_b(), print_c(), print_d(), print_e(), print_f(), print_g(), print_h(), print_i(), print_j()
-
+def print_1():
+    print("1", end='')
+def print_2():
+    print("2", end='')
+def print_3():
+    print("3", end='')
+def print_4():
+    print("4", end='')
+def print_5():
+    print("5", end='')
+def print_6():
+    print("6", end='')
+def print_7():
+    print("7", end='')
+def print_8():
+    print("8", end='')
+def print_9():
+    print("9", end='')
+def print_0():
+    print("0", end='')
+print_8()
+print_8()
+print_0()
+print_0()
+print_5()
+print_5()
+print_5()
+print_3()
+print_5()
+print_3()
+print_5()
