@@ -1,11 +1,10 @@
-def square(a):
-	p = 4*a
-	s = a*a
-	d = (a**2) / 2
-	d = d**0.5
-	
-	k = (p, s, d)
-	
-	return k
-	
-print(square(16))
+
+import math
+def square(side):
+    if isinstance(side, int):
+        return side ** 2
+    else:
+        return math.ceil(side ** 2)
+side_length = 6
+area = square(side_length)
+print(f"Площадь квадрата со стороной {side_length} равна {area}")

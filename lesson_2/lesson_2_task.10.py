@@ -5,5 +5,5 @@ def bank():
 
     for i in range(years):
         n = int(n+stavka*n/100)
-        print("По итогу вы получаете", n, "рублей")
+    print("По итогу вы получаете", n, "рублей")
 bank()

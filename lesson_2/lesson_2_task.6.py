@@ -5,6 +5,5 @@ sm = 0
 for item in lst:
     if (item < MEDIAN) and (item % DIV_NUM == 0):
         print(item)
-    else:
-        sm += item
+
 
