@@ -3,16 +3,16 @@ from string_utils import StringUtils
 
 @pytest.mark.positive_test_capitilize
 
-@pytest.mark.parametrize('line, result', [("привет", "Привет"), ('123', "123"), ("Добрый день"), "Добрый день"])
+@pytest.mark.parametrize('line, result', [("привет", "Привет"), ('123', "123"), ("добрый день"), "Добрый день"])
 def test_positive_capitilize(line, result):
     stringutils = StringUtils()
     res = stringutils.capitilize(line)
     assert res == result
 
-@pytest.mark.xfail
-@pytest.mark.negative_test_capitalize
+@pytest.mark.skip
+@pytest.mark.negative_test_capitilize
 @pytest.mark.parametrize('line, result', [("",""),(" ", " "), (None, None)])
-def test_negative_capitalize(line, result):
+def test_negative_capitilize(line, result):
     stringutils = StringUtils()
-    res = stringutils.capitalize(line)
+    res = stringutils.capitilize(line)
     assert res ==result
