@@ -25,10 +25,10 @@ driver.quit()
 
 
 from selenium import webdriver
-from webdriver_manager.firefox import GeckoDriverManager
 
-driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-driver.get(""http://the-internet.herokuapp.com/add_remove_elements/"")
+
+driver = webdriver.Firefox()
+driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
 Add_Element = "//button[contains(text(), Add Element')]"
 button = driver.find_element(By.XPATH, Add_Element)
 
