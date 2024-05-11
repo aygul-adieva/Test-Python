@@ -21,15 +21,3 @@ driver.quit()
 
 
 
-Element = 'input'
-click = driver,find.element(By.CSS_SELECTOR, element)
-click.send_keys("1000")
-sleep(2)
-click.clear()
-sleep(2)
-
-
-click,send_keys("999")
-
-sleep(2)
-driver.quit()
