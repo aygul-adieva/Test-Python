@@ -15,5 +15,5 @@ driver.find_element(By.CSS_SELECTOR, value="#ajaxButton").click()
 
 text = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".bg-success"))).text
 
-sleep(2)
-ptint(text)
+
+print(text)
