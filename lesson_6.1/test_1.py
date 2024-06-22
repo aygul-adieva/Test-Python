@@ -49,7 +49,7 @@ def test_data_types_form(chrome_browser):
     for field_name, value in form_data.items():
         chrome_browser.find_element(By.NAME, field_name).send_keys(value)
 
-        WebDriverWait(chrome_browser, 40, 0.1) until(
+        WebDriverWait(chrome_browser, 40, 0.1).until(
             EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
         sleep(2)
 
