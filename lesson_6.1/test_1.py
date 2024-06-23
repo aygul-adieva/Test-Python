@@ -4,6 +4,13 @@ from selenium.webdriver.common.by import By
 from configuration import *
 from time import sleep
 
+@pytest.fixture()
+def chrome_browser():
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    yield driver
+    driver.quit()
+
 def test_data_types_form(chrome_browser):
     chrome_browser.get(URL_1)
     chrome_browser.find_element(By.NAME, "first-name").send_keys(first_name)
@@ -66,8 +73,8 @@ def test_data_types_form(chrome_browser):
             "company": "success"
         }
 
-for field_id, class_name in field_classes.items():
-    assert class_name in chrome_browser.find_element(
-        By.ID, field_id).get_attribute("class")
+        for field_id, class_name in field_classes.items():
+            assert class_name in chrome_browser.find_element(
+                By.ID, field_id).get_attribute("class")
 
 
