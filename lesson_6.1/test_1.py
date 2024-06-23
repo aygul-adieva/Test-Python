@@ -1,15 +1,9 @@
+import pytest
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from configuration import *
 from time import sleep
-
-@pytest.fixture()
-def chrome_browser():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    yield driver
-    driver.quit()
 
 def test_data_types_form(chrome_browser):
     chrome_browser.get(URL_1)
@@ -37,6 +31,14 @@ def test_data_types_form(chrome_browser):
     assert "success" in chrome_browser.find_element(By.ID, "country").get_attribute("class")
     assert "success" in chrome_browser.find_element(By.ID, "job-position").get_attribute("class")
     assert "success" in chrome_browser.find_element(By.ID, "company").get_attribute("class")
+
+
+@pytest.fixture()
+def chrome_browser():
+    driver = driver.Chrome()
+    driver.maximize_window()
+    yield driver
+    driver.quit()
 
 def test_data_types_form(chrome_browser):
     chrome_browser.get(URL_1)
