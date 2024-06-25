@@ -1,15 +1,15 @@
 from lesson_7.Data_types.Pages.Mainpage import MainPage
-from lesson_7.Data_types.Pages.Datafilders import DataFild
+from lesson_7.Data_types.Pages.Datafildes import DataFild
 
 
 def test_assertion(chrome_browser):
     main_page = MainPage(chrome_browser)
     main_page.find_fields()
-    main_page.filling_in_the_fields()
+    main_page.filling_in_the_fields()           
     main_page.click_submit_button()
 
     data_fild = DataFild(chrome_browser)
-    data_fild.fin_fields()
+    data_fild.find_fields()
     data_fild.get_class_first_name()
     data_fild.get_class_last_name()
     data_fild.get_class_address()
@@ -28,5 +28,5 @@ def test_assertion(chrome_browser):
     assert "success" in data_fild.get_class_country()
     assert "success" in data_fild.get_class_jobposition()
     assert "success" in data_fild.get_class_company()
-    assert "success" in data_fild.get_class_zipcode()
+    assert "danger" in data_fild.get_class_zipcode()
 
