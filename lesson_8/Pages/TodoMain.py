@@ -15,7 +15,7 @@ class Task:
         return response.json()['id']
     
     def rename(self, id: int, params: json):
-        response = requests.path(self.url + str(id), json=params)
+        response = requests.patch(self.url + str(id), json=params)
         return response
     
     def info(self, id: int):

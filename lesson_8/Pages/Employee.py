@@ -1,8 +1,8 @@
 import requests
 import json
-from lesson_8.constants import 
+from lesson_8.constants import X_client_URL
 
-path = 'employee'
+path = '/employee/'
 
 
 class Company:
@@ -17,7 +17,7 @@ class Company:
         return response.json()
 
     
-    def last_active_company_id(self):
+    def last_active_company_id(self):   
         active_params = {'active': 'true'}
         response = requests.get(
             self.url + '/company', params=active_params)
@@ -34,7 +34,7 @@ class Employer:
         company = {'company': company_id}
         response = requests.get(
             self.url + '/employee', params=company)
-        return response.json()
+        return response.json()  
     
     def add_new(self, token: str, body: json):
         headers = {'x-client-token': token}

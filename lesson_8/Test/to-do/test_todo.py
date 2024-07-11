@@ -20,20 +20,20 @@ def test_todo():
 
     info = zadacha.info(task)
 
-    assert info.json() ['title'] == "Автоматизация - крутая штука"
+    assert info.json()['title'] == "Автоматизация - крутая штука"
 
     assert info.json()['id'] == task
 
     params = {"completed": 'true'}
-    status_true = zadacha.change_status(task, params)
-    assert status_true == True
+    satus_true = zadacha.change_status(task, params)
+    assert satus_true == True
 
     params = {"completed": 'false'}
-    status_false = zadacha.change_status(task, params)
-    assert status_false == False
+    satus_false = zadacha.change_status(task, params)
+    assert satus_false == False
 
     deleting = zadacha.delete(task)
-    assert deleting == 204
-
+    assert deleting == 200
+    
 
  
