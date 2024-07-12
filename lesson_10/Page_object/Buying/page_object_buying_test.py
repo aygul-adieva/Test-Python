@@ -27,7 +27,7 @@ def test_buying_process():
         page.go_to_cart()
 
     with allure.step("Ввод данных покупателя"):
-        page.personal_data("Юрий", "Перевощиков", "123456")
+        page.personal_data("Айгуль", "Крамаренко", "450000")
     
     with allure.step("Сравнение итоговой стоимости с конкретным значением"):
         total = page.total_cost()

@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class BuyingPage:
 
-    def __init__(self, driver: WebDriver) -> None:
+    def __init__(self, driver: WebDriverWait) -> None:
         self._driver = driver
         self._driver.maximize_window()
         self._driver.get("https://www.saucedemo.com/")
